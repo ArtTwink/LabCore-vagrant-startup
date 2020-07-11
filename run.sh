@@ -1,15 +1,15 @@
 #!/bin/bash
 jenkins() {
-    cd /home/arttwink/jenkins && vagrant ${!#}
+    cd /home/arttwink/jenkins && vagrant $param
 }
 kthw() {
-    cd /home/arttwink/kthw && vagrant ${!#}
+    cd /home/arttwink/kthw && vagrant $param
 }
 reg() {
-    cd /home/arttwink/registry && vagrant ${!#}
+    cd /home/arttwink/registry && vagrant $param
 }
-#param=${!#}
-case "$1" in
+param=${!#}
+case $choice in
     -jenkins) jenkins ;;
     -kthw) kthw ;;
     -reg) reg ;;
